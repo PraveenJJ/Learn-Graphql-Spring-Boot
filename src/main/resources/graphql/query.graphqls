@@ -1,0 +1,10 @@
+type Query {
+	fetchStudents: [Student]
+	studentById(id: ID!): Student
+}
+
+type Mutation {
+	enrollStudent(id: ID!, name: String!, age: Int!, grade: String!): Student
+	updateStudent(id: ID!, name: String!, age: Int!, grade: String!): Student
+	removeStudent(id: ID!): Boolean
+}
